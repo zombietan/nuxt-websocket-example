@@ -1,0 +1,72 @@
+
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "游ゴシック Medium", "Yu Gothic", YuGothic, YuGothicMedium, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif !default;
+
+$font-family-base:       $font-family-sans-serif !default;
+
+@import "~bootswatch/dist/slate/variables";
+@import '~bootstrap/scss/bootstrap';
+@import "~bootswatch/dist/slate/bootswatch";
+
+
+h5 {
+    margin-top: 0.5rem;
+}
+
+/* .v-leave-active, */
+.v-enter-active {
+    transition: opacity 1s, transform 1s ease;
+}
+/* .v-leave-to, */
+.v-enter {
+    opacity: 0;
+    transform: translateX(50px);
+}
+/* .v-leave, */
+.v-enter-to {
+    opacity: 1;
+}
+.v-move {
+    transition: transform 1s;
+}
+.v-leave-active {
+    transition: opacity 0s, transform 0s ease;
+}
+.v-leave-active {
+  position: absolute;
+}
+.v-leave-to {
+    opacity: 0;
+    // transform: translateY(10px);
+}
+[v-cloak] {
+    display: none;
+}
+
+.magictime {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.vanishIn {
+  animation-name: vanishIn;
+}
+@keyframes vanishIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(2, 2);
+    filter: blur(90px);
+  }
+
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+    filter: blur(0px);
+  }
+}
+
+::-webkit-scrollbar {
+      display: none;
+      -webkit-appearance: none;
+}
